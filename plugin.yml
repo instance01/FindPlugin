@@ -1,0 +1,17 @@
+name: FindPluginByCmd
+main: com.comze_instancelabs.findplugin.Main
+version: 1.0
+author: instancelabs
+permissions:
+  findplugin.use:
+    description: Gives access to find plugins by their commands. 
+commands:
+   find:
+      description: Find a plugin by command.
+      usage: /find [cmdname]
+   f:
+      description: Find a plugin by command.
+      usage: /f [cmdname]
+   findplugin:
+      description: Find a plugin by command.
+      usage: /findplugin [cmdname]
