@@ -52,7 +52,7 @@ public class Main extends JavaPlugin implements Listener{
         }
 		
 		if(getConfig().getBoolean("config.auto_updating")){
-        	Updater updater = new Updater(this, "find-plugin-cmd", this.getFile(), Updater.UpdateType.DEFAULT, false);
+        	Updater updater = new Updater(this, 63238, this.getFile(), Updater.UpdateType.DEFAULT, false);
         }
     }
 
@@ -73,8 +73,10 @@ public class Main extends JavaPlugin implements Listener{
 						Player p = (Player)sender;
 						//sender.sendMessage(Integer.toString(walk("plugins\\", c, p).size()));
 						//scans through the plugins folder for jars
-						scan("plugins\\", c, p);
+						scan("plugins/", c, p);
+						sender.sendMessage("§2Done searching.");
 					} catch (IOException e) {
+						sender.sendMessage("§4An error has occured!");
 						e.printStackTrace();
 					}
 	    		}
@@ -117,7 +119,7 @@ public class Main extends JavaPlugin implements Listener{
         return t;
     }
 
-    
+
     
 	public List<String> process(InputStream input, String a, String name, Player p) throws IOException {
 		List<String> l = new ArrayList<String>();
